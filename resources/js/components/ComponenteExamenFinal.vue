@@ -13,14 +13,14 @@
         </div>
 
         <!-- Lista de imágenes cargadas -->
-        <div v-if="images.length > 0" class="card shadow-lg">
+        <div v-if="images.length > 0" class="card shadow-lg p-4">
             <ul class="list-group list-group-flush">
                 <li v-for="image in images" :key="image.id" class="list-group-item d-flex align-items-center">
-                    <img :src="image.download_url" alt="Imagen de Picsum" class="image-preview rounded-circle me-3">
+                    <img :src="image.download_url" alt="Imagen de Picsum" class="image-preview rounded-circle me-4">
                     <div class="image-info flex-grow-1">
-                        <h5 class="mb-1 text-primary">{{ image.author }}</h5>
-                        <p class="mb-0 small text-muted">Descargar:</p>
-                        <a :href="image.download_url" target="_blank" class="text-decoration-none text-secondary">{{ image.download_url }}</a>
+                        <h4 class="mb-1 text-primary">{{ image.author }}</h4>
+                        <p class="mb-0 text-secondary">Descargar:</p>
+                        <a :href="image.download_url" target="_blank" class="text-decoration-none fw-bold text-dark">{{ image.download_url }}</a>
                     </div>
                 </li>
             </ul>
@@ -77,7 +77,7 @@ export default {
 
 <style>
 .container {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .spinner-border {
@@ -86,8 +86,8 @@ export default {
 }
 
 .image-preview {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 3px solid #007bff;
     transition: transform 0.2s;
@@ -98,7 +98,7 @@ export default {
 }
 
 .image-info {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .text-primary {
@@ -107,19 +107,19 @@ export default {
 
 .card {
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .list-group-item {
-    padding: 20px 25px;
+    padding: 25px 30px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     transition: background-color 0.2s;
 }
 
 .list-group-item:hover {
-    background-color: #f8f9fa;
+    background-color: #f7f9fb;
 }
 
 a.text-decoration-none:hover {

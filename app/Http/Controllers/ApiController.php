@@ -10,10 +10,9 @@ class ApiController extends Controller
     public function getPincsumData(): \Illuminate\Http\JsonResponse
     {
         try {
-            // Realizamos la solicitud a la API de Picsum
             $response = Http::get('https://picsum.photos/v2/list');
 
-            // Verificamos si la solicitud fue exitosa
+
             if ($response->successful()) {
                 return response()->json($response->json());
             } else {
